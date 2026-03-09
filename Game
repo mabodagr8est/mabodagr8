@@ -1,0 +1,46 @@
+{
+  "name": "Game",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Name of the game"
+    },
+    "iframe_url": {
+      "type": "string",
+      "description": "URL to embed the game in an iframe"
+    },
+    "thumbnail_url": {
+      "type": "string",
+      "description": "Thumbnail image URL for the game card"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "action",
+        "puzzle",
+        "arcade",
+        "racing",
+        "sports",
+        "strategy",
+        "adventure",
+        "multiplayer"
+      ],
+      "description": "Game category"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description of the game"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the game is featured on the homepage"
+    }
+  },
+  "required": [
+    "title",
+    "iframe_url",
+    "category"
+  ]
+}
